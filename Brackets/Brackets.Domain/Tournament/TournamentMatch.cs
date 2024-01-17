@@ -11,11 +11,12 @@ public record TournamentMatch : IGoals, IIdentifiable, IEquatable<TournamentMatc
 	public long? Id { get; init; }
 	public Match Match { get; init; } = null!;
 	public Stage Stage { get; init; } = null!;
-	public WorldCup Cup { get; set; } = null!;
-    public int? LocalGoals { get; set; }
-	public int? AwayGoals { get; set; }
-	public int? LocalPenalties { get; set; }
-	public int? AwayPenalties { get; set; }
+	public WorldCup Cup { get; init; } = null!;
+
+    public int? LocalGoals { get; init; }
+	public int? AwayGoals { get; init; }
+	public int? LocalPenalties { get; init; }
+	public int? AwayPenalties { get; init; }
 
 	public bool IsMatchLocked => IsMatchPlayed || DateTime.UtcNow.AddHours(MATCH_LOCK_HOURS) > Match.MatchDate;
 	public bool IsMatchPlayed => LocalGoals != null && AwayGoals != null;
@@ -44,9 +45,5 @@ public record TournamentMatch : IGoals, IIdentifiable, IEquatable<TournamentMatc
 		return MatchResult.Tie;
 	}
 
-  //  public bool Equals(TournamentMatch? other)
-  //  {
-		//return other is not null && Id.Equals(other.Id);
-  //  }
 }
 

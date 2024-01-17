@@ -1,6 +1,6 @@
 ﻿namespace Brackets.Domain.Tournament;
 
-public record Stage
+public record Stage : IIdentifiable
 {
     public const int NUMBER_GROUPS = 10;
     public const int ELIMINATION_ID_START = 100;
@@ -14,27 +14,27 @@ public record Stage
 
     public Stage() { }
 
-    public virtual long Id { get; set; }
-    //public virtual int Order { get; set; } // Use Id as order
-    public virtual string Name { get; set; } = string.Empty;
+    public long? Id { get; init; }
+    //public int Order { get; set; } // Use Id as order
+    public string Name { get; init; } = string.Empty;
 
-    public virtual string GetName(string? lang)
+    public string GetName(string? lang)
     {
         var langIndex = lang is null || lang.StartsWith("en") ? "en" : "es";
 
         if (Id <= NUMBER_GROUPS)
         {
-            // Fase de grupos
+            // Group Stage
             return Translations[langIndex][0] + " " + Name;
         }
         else if (Id >= ELIMINATION_ID_START && Id <= ELIMINATION_ID_END)
         {
-            // Eliminatorias
-            return Translations[langIndex][Id - (ELIMINATION_ID_START - 1)];
+            // Elimination Stage
+            return Translations[langIndex][(int)(Id! - (ELIMINATION_ID_START - 1))];
         }
         else
         {
-            // Otros partidos
+            // Other Matches
             return Translations[langIndex][5];
         }
     }
