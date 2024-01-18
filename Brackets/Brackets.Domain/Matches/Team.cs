@@ -1,18 +1,13 @@
 ﻿using LanguageCode = System.String;
 using CountryLang = System.String;
 
-
 namespace Brackets.Domain.Matches;
 
-public record Team : IIdentifiable
+public record Team(TeamId Id, 
+    string Name, Country 
+    Country, 
+    IDictionary<LanguageCode, CountryLang> CountryLangs) 
 {
-    public Team() { }
-
-    public long? Id { get; init; }
-    protected string Name { get; init; } = string.Empty;
-    public Country Country { get; init; } = default!;
-    public IDictionary<LanguageCode, CountryLang> CountryLangs { get; init; } = default!;
-
     /// <summary>
     /// Gets the name of the country according to the language. English is the default.
     /// </summary>
@@ -31,4 +26,4 @@ public record Team : IIdentifiable
         return Country != null ? Country.FlagImageCode : string.Empty;
     }
 
-}
+};

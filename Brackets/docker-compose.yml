@@ -1,0 +1,12 @@
+version: '3.9'
+  
+services:
+  mongo:
+    image: mongo
+    container_name: mongo2022
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodbdata:/data/db
+volumes:
+  mongodbdata:

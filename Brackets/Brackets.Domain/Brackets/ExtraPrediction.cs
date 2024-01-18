@@ -5,7 +5,7 @@ namespace Brackets.Domain.Brackets;
 public record ExtraPrediction: IIdentifiable
 {
     // TODO: Remove hardcoding
-    private static readonly List<long> MOST_ASSISTS_Q_2022_IDS = new()
+    private static readonly List<long?> MOST_ASSISTS_Q_2022_IDS = new()
     { 
         88L, 162L, 232L, 427L, 514L
     };
@@ -37,8 +37,8 @@ public record ExtraPrediction: IIdentifiable
             .Select(q => q.Points)
             .FirstOrDefault(0);
 
-        long? eprId = null;
-        long? thisId = null;
+        IIdentifiable? eprId = null;
+        IIdentifiable? thisId = null;
 
         if (Player == null && Team != null)
         {
@@ -51,7 +51,7 @@ public record ExtraPrediction: IIdentifiable
          
             if (epr.PredictionType!.Id == 10) // Most Assist
             {
-                if (MOST_ASSISTS_Q_2022_IDS.Contains(thisId!.Value))
+                if (MOST_ASSISTS_Q_2022_IDS.Contains(thisId.Id))
                     eprId = thisId;
             }
             else 
@@ -60,9 +60,16 @@ public record ExtraPrediction: IIdentifiable
             }
         }
 
-        if (!eprId.HasValue || !thisId.HasValue) return 0;
-        predResult = eprId.Value == thisId.Value ? ExtraPredResult.Match : ExtraPredResult.Miss;
-        return predResult == ExtraPredResult.Match ? predPoints : 0;
+        if (eprId?.Id is null || thisId?.Id is null) 
+            return 0;
+
+        predResult = eprId == thisId ? 
+            ExtraPredResult.Match 
+            : ExtraPredResult.Miss;
+
+        return predResult == ExtraPredResult.Match ? 
+            predPoints 
+            : 0;
     }
 }
 

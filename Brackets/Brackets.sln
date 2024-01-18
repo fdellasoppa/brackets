@@ -5,9 +5,18 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brackets.API", "Brackets.API\Brackets.API.csproj", "{1402BDC9-E0FA-4F7E-8AE0-66C6D8EBB2DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brackets.Domain", "Brackets.Domain\Brackets.Domain.csproj", "{A6B3DB7E-ADDC-460F-B39A-0136167FB086}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brackets.Domain", "Brackets.Domain\Brackets.Domain.csproj", "{A6B3DB7E-ADDC-460F-B39A-0136167FB086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brackets.Tests", "Brackets.Tests\Brackets.Tests.csproj", "{C2C7E8C4-158E-4878-8FD5-79FB6A3AD495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brackets.Tests", "Brackets.Tests\Brackets.Tests.csproj", "{C2C7E8C4-158E-4878-8FD5-79FB6A3AD495}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brackets.Application", "Brackets.Application\Brackets.Application.csproj", "{D362898C-1C9A-4D0B-BF99-7AF582FA51FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brackets.Infrastructure", "Brackets.Infrastructure\Brackets.Infrastructure.csproj", "{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D74AABB3-8A11-4171-9227-A8FBC20D6C73}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +36,14 @@ Global
 		{C2C7E8C4-158E-4878-8FD5-79FB6A3AD495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C7E8C4-158E-4878-8FD5-79FB6A3AD495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C7E8C4-158E-4878-8FD5-79FB6A3AD495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D362898C-1C9A-4D0B-BF99-7AF582FA51FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D362898C-1C9A-4D0B-BF99-7AF582FA51FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D362898C-1C9A-4D0B-BF99-7AF582FA51FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D362898C-1C9A-4D0B-BF99-7AF582FA51FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
