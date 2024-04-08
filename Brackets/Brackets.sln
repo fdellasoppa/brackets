@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "brackets.reactuser", "Brackets.ReactUser\brackets.reactuser.esproj", "{A02E7841-8F29-4484-BDD0-E928BB35AF7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,12 @@ Global
 		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD4039B8-2CF0-4AB9-8119-0DD67F9D168A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02E7841-8F29-4484-BDD0-E928BB35AF7F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
