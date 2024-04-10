@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
-import { IS_PROD_ENVIRONMENT } from "./utils/constants/constants";
+import { IS_PROD_ENVIRONMENT } from "./shared/constants.ts";
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
-import "./i18n/config";
+//import "./i18n/config";
 import './index.css';
 
 import {
@@ -15,7 +15,7 @@ import {
 
 // Disable React Dev Tools on prod
 if (IS_PROD_ENVIRONMENT) {
-    disableReactDevTools()
+    disableReactDevTools();
 }
 
 const router = createBrowserRouter([
