@@ -1,0 +1,127 @@
+/*.oi {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}*/
+
+.bi {
+	width: 37px;
+	font-size: 1.1rem;
+	vertical-align: text-top;
+	top: -2px;
+	color: #ffffff;
+}
+
+
+.navbar-toggler {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row {
+	height: 54px;
+	align-content: center;
+}
+
+.navbar-brand {
+	font-size: 1.1rem;
+}
+
+.nav-item {
+	font-size: 0.9rem;
+	padding-bottom: 8px;
+	margin: 0px 20px;
+	letter-spacing: 0.5px;
+}
+
+	.nav-item:first-of-type {
+		padding-top: 16px;
+	}
+
+	.nav-item:last-of-type {
+		padding-bottom: 1rem;
+	}
+
+	.nav-item ::deep a {
+		color: #d7d7d7;
+		border-radius: 4px;
+		height: 39px;
+		display: flex;
+		align-items: center;
+		line-height: 3rem;
+	}
+
+		.nav-item ::deep a.active {
+			background-color: rgba(255,255,255,0.25);
+			color: white;
+		}
+
+		.nav-item ::deep a:hover {
+			background-color: rgba(255,255,255,0.1);
+			color: white;
+		}
+
+	.nav-item ::deep div {
+		color: #d7d7d7;
+		border-radius: 4px;
+		height: 39px;
+		display: flex;
+		align-items: center;
+		line-height: 3rem;
+	}
+
+.nav-bottom button {
+	padding: 0;
+	width: 93%;
+	background: none;
+}
+
+.nav-item ::deep div.active {
+	background-color: rgba(255,255,255,0.25);
+	color: white;
+}
+
+.nav-item ::deep div:hover {
+	background-color: rgba(255,255,255,0.1);
+	color: white;
+}
+
+
+.nav-bottom .nav-item {
+	margin: 0px 9px 0px 9px;
+	padding: 13px 0px 0px 0px;
+	font-size: 14px;
+	letter-spacing: -1px;
+}
+
+@media (min-width: 641px) {
+	.navbar-toggler {
+		display: none;
+	}
+
+	.collapse {
+		/* Never collapse the sidebar for wide screens */
+		display: block;
+	}
+}
+
+.flex-column {
+	height: 90vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+	.flex-column hr {
+		color: #fff;
+		margin: 0px 20px;
+	}
+
+.baufest-worldcup {
+	width: 82px;
+	height: auto;
+	margin-top: 5px;
+}
+
+.container-fluid {
+	justify-content: center;
+}

@@ -6,6 +6,7 @@ import { IS_PROD_ENVIRONMENT } from "./shared/constants.ts";
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import "./shared/i18n/i18n-config";
 
 import {
