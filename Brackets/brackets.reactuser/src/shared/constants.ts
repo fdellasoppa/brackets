@@ -24,3 +24,13 @@ export const languages = [
 
 export const initialLanguage = languages[ENGLISH_POSITION].code
 
+// Routes
+export const ROUTES = {
+    PREDICTIONS: "/predictions",
+    SCHEDULE: "/schedule",
+    SCORES: "/scores",
+    CONTACT: "/contact",
+    CULTURE: "/culture",
+    RULES: "/rules",
+    404: "/404"
+} as const
