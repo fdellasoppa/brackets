@@ -21,10 +21,15 @@
 .top-row {
 	height: 54px;
 	align-content: center;
+	width: 100%;
 }
 
 .navbar-brand {
 	font-size: 1.1rem;
+}
+
+nav .navbar-nav li a {
+	color: white !important;
 }
 
 .nav-item {
@@ -32,6 +37,7 @@
 	padding-bottom: 8px;
 	margin: 0px 20px;
 	letter-spacing: 0.5px;
+	white-space: nowrap;
 }
 
 	.nav-item:first-of-type {
@@ -42,7 +48,7 @@
 		padding-bottom: 1rem;
 	}
 
-	.nav-item ::deep a {
+	.nav-item a {
 		color: #d7d7d7;
 		border-radius: 4px;
 		height: 39px;
@@ -51,17 +57,17 @@
 		line-height: 3rem;
 	}
 
-		.nav-item ::deep a.active {
+		.nav-item a.active {
 			background-color: rgba(255,255,255,0.25);
 			color: white;
 		}
 
-		.nav-item ::deep a:hover {
+		.nav-item a:hover {
 			background-color: rgba(255,255,255,0.1);
 			color: white;
 		}
 
-	.nav-item ::deep div {
+	.nav-item div {
 		color: #d7d7d7;
 		border-radius: 4px;
 		height: 39px;
@@ -76,12 +82,12 @@
 	background: none;
 }
 
-.nav-item ::deep div.active {
+.nav-item  div.active {
 	background-color: rgba(255,255,255,0.25);
 	color: white;
 }
 
-.nav-item ::deep div:hover {
+.nav-item  div:hover {
 	background-color: rgba(255,255,255,0.1);
 	color: white;
 }

@@ -43,26 +43,27 @@ const router = createBrowserRouter([
     {
         path: "/*",
         element: <App />,
-        children: [{
-                path: PREDICTIONS,
-                element: <Predictions />
-            }, {
-                path: SCHEDULE,
-                element: <Schedule />
-            }, {
-                path: SCORES,
-                element: <Schedule />
-            }, {
-                path: CONTACT,
-                element: <Schedule />
-            }, {
-                path: CULTURE,
-                element: <Schedule />
-            }, {
-                path: RULES,
-                element: <Schedule />
-            }]
+        children: []
     },
+    {
+        path: PREDICTIONS,
+        element: <Predictions />
+    }, {
+        path: SCHEDULE,
+        element: <Schedule />
+    }, {
+        path: SCORES,
+        element: <Schedule />
+    }, {
+        path: CONTACT,
+        element: <Schedule />
+    }, {
+        path: CULTURE,
+        element: <Schedule />
+    }, {
+        path: RULES,
+        element: <Schedule />
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
