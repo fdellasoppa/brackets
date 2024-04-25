@@ -2,7 +2,7 @@
 using Brackets.API.Errors;
 using Brackets.Application.Matches;
 using Brackets.Infrastructure.Data;
-using Brackets.Infrastructure.Matches;
+using Brackets.Infrastructure.Configuration;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
@@ -19,7 +19,6 @@ public static class ConfigExtensions
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        //builder.Services.AddSwaggerGen();
 
         builder.Services.AddSwaggerGen(option =>
         {
@@ -63,10 +62,6 @@ public static class ConfigExtensions
 
         builder.Services.AddControllers();
 
-		//var mongoDbSettings = builder.Configuration
-		//    .GetSection(nameof(MongoDbSettings))
-		//.Get<MongoDbSettings>();
-
 		builder.Services.AddOptions();
         builder.Services.Configure<MongoDbSettings>(
             builder.Configuration.GetSection(nameof(MongoDbSettings))
@@ -74,13 +69,8 @@ public static class ConfigExtensions
 
         builder.Services.AddSingleton<IMongoDbContext, MongoDbContext>();
         builder.Services.AddTransient<IMatchService, MatchService>();
-		// TODO: Who should map repos? Application layer or infra maybe?
-		builder.Services.AddTransient<IMatchRepository, MatchRepository>();
-
-        //builder.Services.AddControllers(options =>
-        //{
-        //    options.Filters.Add<HttpResponseExceptionFilter>();
-        //});
+        // TODO: Who should map repos? Application layer or infra maybe?
+        builder.Services.MapRepositories();
 
         return builder.Build();
     }
