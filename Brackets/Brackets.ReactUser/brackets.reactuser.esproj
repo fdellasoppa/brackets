@@ -11,6 +11,7 @@
   <ItemGroup>
     <Folder Include="src\components\dashboard\" />
     <Folder Include="src\components\contact\" />
+    <Folder Include="src\components\culture\" />
     <Folder Include="src\components\schedule\" />
     <Folder Include="src\components\predictions\" />
     <Folder Include="src\shared\layout\" />
