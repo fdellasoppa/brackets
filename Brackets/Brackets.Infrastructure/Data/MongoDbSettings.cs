@@ -1,4 +1,4 @@
-﻿namespace BL.Students.Infrastructure.Data;
+﻿namespace Brackets.Infrastructure.Data;
 
 public class MongoDbSettings
 {

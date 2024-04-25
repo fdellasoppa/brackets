@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-namespace BL.Students.Infrastructure.Data;
+namespace Brackets.Infrastructure.Data;
 
 public sealed class MongoDbContext : IMongoDbContext
 {
