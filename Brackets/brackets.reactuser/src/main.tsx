@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
 
 import {
     IS_PROD_ENVIRONMENT,
@@ -11,19 +15,19 @@ import './main.css';
 
 import "./shared/i18n/i18n-config";
 
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
-
-import App from './App.tsx';
-
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 import reportWebVitals from './shared/layout/reportWebVitals.ts';
 
+import {
+    QueryClient,
+    QueryClientProvider
+} from "@tanstack/react-query";
+
 // Functional Components
+import App from './App.tsx';
 import Predictions from './components/predictions/Predictions.tsx';
 import Schedule from './components/schedule/Schedule.tsx';
+
 
 // Disable React Dev Tools on prod
 if (IS_PROD_ENVIRONMENT) {
@@ -66,9 +70,14 @@ const router = createBrowserRouter([
     }
 ]);
 
+// Create a client
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+        </QueryClientProvider>
     </React.StrictMode>,
 );
 

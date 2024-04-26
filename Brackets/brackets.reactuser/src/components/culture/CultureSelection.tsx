@@ -14,18 +14,18 @@ function CultureSelection() {
     };
 
   return (
-        <p>
-            <label>
-                <b>Select your language:</b>
-              {cultures.map((value, index) => (
-                  <select value={value} onChange={handleChange}>
+      <p>
+          <label>
+              <b>Select your language:</b>
+              <select value="0" onChange={handleChange}>
+                  {cultures.map((value, index) => (
                       <option value={value} key={value}>
                           {toLabel(index)}
                       </option>
-                  </select>
-                      ))}
-        </label>
-</p >
+                  ))}
+              </select>
+          </label>
+      </p >
   );
 }
 
