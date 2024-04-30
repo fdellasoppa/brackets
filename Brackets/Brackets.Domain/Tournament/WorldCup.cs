@@ -1,4 +1,6 @@
-﻿namespace Brackets.Domain.Tournament;
+﻿using Brackets.Domain.Matches;
+
+namespace Brackets.Domain.Tournament;
 
 public record WorldCup : IIdentifiable
 {
@@ -10,7 +12,7 @@ public record WorldCup : IIdentifiable
     public int Year { get; init; }
     public DateTime StartDate { get; init; }
 
-    public IList<TournamentMatch> Matches { get; init; } = new List<TournamentMatch>();
+    public IList<Match> Matches { get; init; } = new List<Match>();
 
     /// <summary>
     /// Number of matches played so far, used for caching results.

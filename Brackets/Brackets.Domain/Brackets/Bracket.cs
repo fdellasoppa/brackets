@@ -1,4 +1,5 @@
-﻿using Brackets.Domain.Tournament;
+﻿using Brackets.Domain.Matches;
+using Brackets.Domain.Tournament;
 
 namespace Brackets.Domain.Brackets;
 
@@ -36,8 +37,8 @@ public record Bracket : IIdentifiable
 	// TODO: Change to any tournament
 	public WorldCup Tournament { get; set; } = default!;
 
-    public IDictionary<TournamentMatch, GoalScore> Predictions { get; set; } 
-		= new Dictionary<TournamentMatch, GoalScore>();
+    public IDictionary<Match, GoalScore> Predictions { get; set; } 
+		= new Dictionary<Match, GoalScore>();
 	public IList<ExtraPrediction> ExtraPredictions { get; set; } = null!;
 
     public void UpdateCounts(PredictionResult res)

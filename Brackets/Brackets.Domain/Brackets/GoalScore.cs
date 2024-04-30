@@ -1,4 +1,5 @@
-﻿using Brackets.Domain.Tournament;
+﻿using Brackets.Domain.Matches;
+using Brackets.Domain.Tournament;
 
 namespace Brackets.Domain.Brackets;
 
@@ -30,7 +31,7 @@ public record GoalScore : IGoals, IIdentifiable
         return match.LocalGoals == LocalGoals &&
             match.AwayGoals == AwayGoals ?
             PredictionResult.Goals :
-                TournamentMatch.CalculateResult(match) == TournamentMatch.CalculateResult(this) ?
+                Match.CalculateResult(match) == Match.CalculateResult(this) ?
                 PredictionResult.Match :
                 PredictionResult.Miss;
     }

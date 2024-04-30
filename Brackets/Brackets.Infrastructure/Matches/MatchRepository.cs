@@ -7,7 +7,7 @@ namespace Brackets.Infrastructure.Matches;
 
 public class MatchRepository : IMatchRepository
 {
-	private const string CollectionName = nameof(Match);
+	private const string CollectionName = "matches";
 
 	private readonly IMongoDbContext _mongoDbContext;
 
