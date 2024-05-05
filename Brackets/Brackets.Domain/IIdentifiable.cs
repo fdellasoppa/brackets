@@ -2,5 +2,5 @@
 
 public interface IIdentifiable
 {
-    public long? Id { get; init; }
+    public string Id { get; init; }
 }

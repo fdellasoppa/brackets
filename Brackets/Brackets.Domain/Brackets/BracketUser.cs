@@ -6,12 +6,12 @@ public record BracketUser : IIdentifiable
 {
 	public BracketUser() { }
 
-	public long? Id { get; init; }
+	public string Id { get; init; } = null!;
 	public AppUser AppUser { get; init; } = null!;
 
-	public IList<Bracket> Brackets { get; set; } = new List<Bracket>();
+	public IList<Bracket> Brackets { get; set; } = [];
 
-	public Bracket? GetCupBracket(long cupId)
+	public Bracket? GetCupBracket(string cupId)
 	{
 		return Brackets?.FirstOrDefault(b => b.Tournament.Id == cupId);
 	}

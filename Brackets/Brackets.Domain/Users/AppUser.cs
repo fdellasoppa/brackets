@@ -6,7 +6,7 @@ public record AppUser : IIdentifiable
 {
 	public AppUser() { }
 
-	public long? Id { get; init; }
+	public string Id { get; init; } = null!;
 	public string Login { get; init; } = string.Empty;
 	public string? Password { get; set; }
 	public string FirstName { get; init; } = string.Empty;

@@ -1,3 +1,3 @@
 ﻿namespace Brackets.Domain.Matches;
 
-public record MatchId(long? Id) : IIdentifiable;
+public record MatchId(string Id) : IIdentifiable;

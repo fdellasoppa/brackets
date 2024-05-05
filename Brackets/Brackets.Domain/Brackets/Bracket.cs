@@ -22,7 +22,7 @@ public record Bracket : IIdentifiable
 {
 	public Bracket() { }
 
-    public long? Id { get; init; }
+    public string Id { get; init; } = null!;
 	public BracketUser BracketUser { get; init; } = null!;
 	public int Score { get; set; }
 	public int Position { get; set; }
@@ -35,7 +35,7 @@ public record Bracket : IIdentifiable
 
 
 	// TODO: Change to any tournament
-	public WorldCup Tournament { get; set; } = default!;
+	public Tournament.Tournament Tournament { get; set; } = default!;
 
     public IDictionary<Match, GoalScore> Predictions { get; set; } 
 		= new Dictionary<Match, GoalScore>();

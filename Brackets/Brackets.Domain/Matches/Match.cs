@@ -6,13 +6,13 @@ public class Match : IGoals, IIdentifiable, IEquatable<Match>
 {
     public const int MATCH_LOCK_HOURS = 6;
 
-	public long? Id { get; init; }
+	public string Id { get; init; } = null!;
 
 	public Team LocalTeam { get; init; } = null!;
 	public Team AwayTeam { get; init; } = null!;
 	public DateTime MatchDate { get; init; }
 
-	public WorldCup Cup { get; init; } = null!;
+	public Tournament.Tournament Cup { get; init; } = null!;
 	public Stage Stage { get; init; } = null!;
 
 	public int? LocalGoals { get; init; }

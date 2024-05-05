@@ -10,7 +10,7 @@ public record GoalScore : IGoals, IIdentifiable
     protected const int MISS_PREDICTION_VALUE = 0;
     protected const int NONE_PREDICTION_VALUE = 0;
 
-    public long? Id { get; init; }
+    public string Id { get; init; } = null!;
     public int? LocalGoals { get; init; }
     public int? AwayGoals { get; init; }
     public int? LocalPenalties { get; init; }

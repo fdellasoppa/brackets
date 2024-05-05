@@ -1,8 +1,8 @@
 ﻿using Brackets.API.Matches;
 using Brackets.API.Errors;
-using Brackets.Application.Matches;
 using Brackets.Infrastructure.Data;
 using Brackets.Infrastructure.Configuration;
+using Brackets.Application.Configuration;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
@@ -68,9 +68,8 @@ public static class ConfigExtensions
             );
 
         builder.Services.AddSingleton<IMongoDbContext, MongoDbContext>();
-        builder.Services.AddTransient<IMatchService, MatchService>();
-        // TODO: Who should map repos? Application layer or infra maybe?
-        builder.Services.MapRepositories();
+        builder.Services.ConfigServices();
+        builder.Services.ConfigRepositories();
 
         return builder.Build();
     }

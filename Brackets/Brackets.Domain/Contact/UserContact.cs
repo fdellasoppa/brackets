@@ -6,7 +6,7 @@ public record UserContact : IIdentifiable
 {
 	public UserContact() { }
 
-    public long? Id { get; init; }
+    public string Id { get; init; } = null!;
 	public BracketUser? UserId { get; init; }
 	public string UserName { get; init; } = string.Empty;
 	public string Email { get; init; } = string.Empty;

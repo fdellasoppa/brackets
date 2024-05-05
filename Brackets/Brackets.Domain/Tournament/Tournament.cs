@@ -2,17 +2,18 @@
 
 namespace Brackets.Domain.Tournament;
 
-public record WorldCup : IIdentifiable
+public class Tournament : IIdentifiable
 {
-    public WorldCup() { }
+    public Tournament() { }
 
-    public long? Id { get; init; }
+    public string Id { get; init; } = null!;
 
     public string Name { get; init; } = string.Empty;
     public int Year { get; init; }
     public DateTime StartDate { get; init; }
 
-    public IList<Match> Matches { get; init; } = new List<Match>();
+	public IList<Stage> Stages { get; init; } = [];
+	public IList<Match> Matches { get; init; } = [];
 
     /// <summary>
     /// Number of matches played so far, used for caching results.

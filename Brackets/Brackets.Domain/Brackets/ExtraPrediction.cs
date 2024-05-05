@@ -4,14 +4,12 @@ namespace Brackets.Domain.Brackets;
 
 public record ExtraPrediction: IIdentifiable
 {
-    // TODO: Remove hardcoding
-    private static readonly List<long?> MOST_ASSISTS_Q_2022_IDS = new()
-    { 
-        88L, 162L, 232L, 427L, 514L
-    };
+	// TODO: Remove hardcoding
+	private static readonly List<string> MOST_ASSISTS_Q_2022_IDS = [
+		""//88L, 162L, 232L, 427L, 514L
+    ];
 
-    public ExtraPrediction() { }
-    public long? Id { get; init; }
+    public string Id { get; init; } = null!;
     public Bracket Bracket { get; set; } = null!;
     public Player? Player { get; set; } = default;
     public Team? Team { get; set; } = default;
@@ -49,7 +47,8 @@ public record ExtraPrediction: IIdentifiable
         {
             thisId = Player!.Id;
          
-            if (epr.PredictionType!.Id == 10) // Most Assist
+            // TODO: Remove hardcode
+            if (epr.PredictionType!.Id == "10") // Most Assist
             {
                 if (MOST_ASSISTS_Q_2022_IDS.Contains(thisId.Id))
                     eprId = thisId;
