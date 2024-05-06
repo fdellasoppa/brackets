@@ -17,8 +17,8 @@ public class Match : IGoals, IIdentifiable, IEquatable<Match>
 
 	public int? LocalGoals { get; init; }
 	public int? AwayGoals { get; init; }
-	public int? LocalPenalties { get; init; }
-	public int? AwayPenalties { get; init; }
+	//public int? LocalPenalties { get; init; }
+	//public int? AwayPenalties { get; init; }
 
 	#region IEquatable
 
@@ -59,13 +59,13 @@ public class Match : IGoals, IIdentifiable, IEquatable<Match>
 			return MatchResult.Away;
 
 		if (goals.LocalGoals == goals.AwayGoals)
-			if (goals.LocalPenalties == null || goals.AwayPenalties == null)
+			//if (goals.LocalPenalties == null || goals.AwayPenalties == null)
 				return MatchResult.Tie;
 
-		if (goals.LocalPenalties > goals.AwayPenalties)
-			return MatchResult.Local;
-		if (goals.AwayPenalties > goals.LocalPenalties)
-			return MatchResult.Away;
+		//if (goals.LocalPenalties > goals.AwayPenalties)
+		//	return MatchResult.Local;
+		//if (goals.AwayPenalties > goals.LocalPenalties)
+		//	return MatchResult.Away;
 
 		return MatchResult.Tie;
 	}

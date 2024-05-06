@@ -8,8 +8,8 @@ public class Tournament : IIdentifiable
 
     public string Id { get; init; } = null!;
 
-    public string Name { get; init; } = string.Empty;
-    public int Year { get; init; }
+	public StringTranslations Names { get; init; } = null!;
+	public int Year { get; init; }
     public DateTime StartDate { get; init; }
 
 	public IList<Stage> Stages { get; init; } = [];

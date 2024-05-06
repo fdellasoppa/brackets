@@ -10,7 +10,10 @@ namespace Brackets.Infrastructure.Configuration;
 public static class RepositoryMapper
 {
 	private readonly static ICollection<IMongoMapper> mappers = [
+		new StringTranslationsMapper(),
+		new TeamMapper(),
 		new MatchMapper(),
+		new StageMapper(),
 		new TournamentMapper(),
 	];
 
