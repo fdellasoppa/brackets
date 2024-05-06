@@ -3,7 +3,7 @@ using Brackets.Domain.Tournaments;
 
 namespace Brackets.Domain.Brackets;
 
-public record GoalScore : IGoals, IIdentifiable
+public record GoalScore : IGoals, IStringIdentifiable
 {
     protected const int GOAL_PREDICTION_VALUE = 5;
     protected const int RESULT_PREDICTION_VALUE = 3;

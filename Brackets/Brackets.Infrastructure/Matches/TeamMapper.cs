@@ -11,14 +11,10 @@ internal sealed class TeamMapper : IMongoMapper
 {
 	public void Map()
 	{
-		BsonClassMap.RegisterClassMap<TeamId>(cm => {
+		BsonClassMap.RegisterClassMap<Team>(cm => {
 			cm.MapIdProperty(p => p.Id)
 				.SetIdGenerator(StringObjectIdGenerator.Instance)
 				.SetSerializer(new StringSerializer(BsonType.ObjectId));
-		});
-
-		BsonClassMap.RegisterClassMap<Team>(cm => {
-			cm.MapProperty(p => p.Id);
 
 			cm.MapProperty(p => p.Names).SetElementName("names");
 

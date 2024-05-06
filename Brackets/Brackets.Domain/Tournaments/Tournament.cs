@@ -2,7 +2,7 @@
 
 namespace Brackets.Domain.Tournaments;
 
-public class Tournament : IIdentifiable
+public class Tournament
 {
     public Tournament() { }
 

@@ -1,8 +1,9 @@
-﻿using Brackets.Domain.Users;
+﻿using Brackets.Domain.Tournaments;
+using Brackets.Domain.Users;
 
 namespace Brackets.Domain.Brackets;
 
-public record BracketUser : IIdentifiable
+public record BracketUser : IStringIdentifiable
 {
 	public BracketUser() { }
 

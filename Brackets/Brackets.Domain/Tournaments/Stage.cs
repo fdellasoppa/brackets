@@ -1,6 +1,6 @@
 ﻿namespace Brackets.Domain.Tournaments;
 
-public record Stage : IIdentifiable
+public record Stage
 {
     public const int NUMBER_GROUPS = 10;
     public const int ELIMINATION_ID_START = 100;

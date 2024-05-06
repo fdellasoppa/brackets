@@ -2,7 +2,7 @@
 
 namespace Brackets.Domain.Users;
 
-public record AppUser : IIdentifiable
+public record AppUser : IStringIdentifiable
 {
 	public AppUser() { }
 

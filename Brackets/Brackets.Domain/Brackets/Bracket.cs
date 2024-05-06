@@ -18,7 +18,7 @@ public enum ExtraPredResult
 	Match
 }
 
-public record Bracket : IIdentifiable
+public record Bracket : IStringIdentifiable
 {
 	public Bracket() { }
 

@@ -2,7 +2,7 @@
 
 namespace Brackets.Domain.Matches;
 
-public class Match : IGoals, IIdentifiable, IEquatable<Match>
+public class Match : IGoals, IStringIdentifiable, IEquatable<Match>
 {
     public const int MATCH_LOCK_HOURS = 6;
 

@@ -3,7 +3,7 @@ using Brackets.Domain.Tournaments;
 
 namespace Brackets.Domain.Brackets;
 
-public record ExtraPredictionResult: IIdentifiable
+public record ExtraPredictionResult: IStringIdentifiable
 {
     public ExtraPredictionResult() { }
 

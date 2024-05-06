@@ -1,6 +1,6 @@
 ﻿namespace Brackets.Domain;
 
-public interface IIdentifiable
+public interface IStringIdentifiable
 {
     public string Id { get; init; }
 }

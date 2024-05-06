@@ -1,6 +1,6 @@
 ﻿namespace Brackets.Domain.Brackets;
 
-public record PredictionType : IIdentifiable
+public record PredictionType : IStringIdentifiable
 {
     internal const string DEFAULT_TRANSLATION_LANGUAGE = "en";
 

@@ -1,6 +1,6 @@
 ﻿
 namespace Brackets.Domain.Matches;
 
-public record Team(TeamId Id,
+public record Team(string Id,
 	Dictionary<string, string> Names,
 	string ImageName);

@@ -2,7 +2,7 @@
 
 namespace Brackets.Domain.Contact;
 
-public record UserContact : IIdentifiable
+public record UserContact : IStringIdentifiable
 {
 	public UserContact() { }
 

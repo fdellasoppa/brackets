@@ -2,7 +2,7 @@
 
 namespace Brackets.Domain.Brackets;
 
-public record ExtraPrediction: IIdentifiable
+public record ExtraPrediction: IStringIdentifiable
 {
 	// TODO: Remove hardcoding
 	private static readonly List<string> MOST_ASSISTS_Q_2022_IDS = [
@@ -35,8 +35,8 @@ public record ExtraPrediction: IIdentifiable
             .Select(q => q.Points)
             .FirstOrDefault(0);
 
-        IIdentifiable? eprId = null;
-        IIdentifiable? thisId = null;
+        string? eprId = null;
+        string? thisId = null;
 
         if (Player == null && Team != null)
         {
@@ -50,7 +50,7 @@ public record ExtraPrediction: IIdentifiable
             // TODO: Remove hardcode
             if (epr.PredictionType!.Id == "10") // Most Assist
             {
-                if (MOST_ASSISTS_Q_2022_IDS.Contains(thisId.Id))
+                if (MOST_ASSISTS_Q_2022_IDS.Contains(thisId))
                     eprId = thisId;
             }
             else 
@@ -59,7 +59,7 @@ public record ExtraPrediction: IIdentifiable
             }
         }
 
-        if (eprId?.Id is null || thisId?.Id is null) 
+        if (eprId is null || thisId is null) 
             return 0;
 
         predResult = eprId == thisId ? 
