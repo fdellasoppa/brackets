@@ -1,4 +1,4 @@
-﻿namespace Brackets.Domain.Tournament;
+﻿namespace Brackets.Domain.Tournaments;
 
 public record Stage : IIdentifiable
 {

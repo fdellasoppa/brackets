@@ -1,5 +1,5 @@
 ﻿using Brackets.Domain.Matches;
-using Brackets.Domain.Tournament;
+using Brackets.Domain.Tournaments;
 
 namespace Brackets.Domain.Brackets;
 
@@ -35,7 +35,7 @@ public record Bracket : IIdentifiable
 
 
 	// TODO: Change to any tournament
-	public Tournament.Tournament Tournament { get; set; } = default!;
+	public Tournament Tournament { get; set; } = default!;
 
     public IDictionary<Match, GoalScore> Predictions { get; set; } 
 		= new Dictionary<Match, GoalScore>();

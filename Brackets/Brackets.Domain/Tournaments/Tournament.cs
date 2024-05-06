@@ -1,6 +1,6 @@
 ﻿using Brackets.Domain.Matches;
 
-namespace Brackets.Domain.Tournament;
+namespace Brackets.Domain.Tournaments;
 
 public class Tournament : IIdentifiable
 {

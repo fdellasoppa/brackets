@@ -1,5 +1,5 @@
 ﻿using Brackets.Domain.Matches;
-using Brackets.Domain.Tournament;
+using Brackets.Domain.Tournaments;
 
 namespace Brackets.Domain.Brackets;
 

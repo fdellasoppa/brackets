@@ -1,4 +1,4 @@
-﻿using Brackets.Domain.Tournament;
+﻿using Brackets.Domain.Tournaments;
 
 namespace Brackets.Domain.Matches;
 
@@ -12,7 +12,7 @@ public class Match : IGoals, IIdentifiable, IEquatable<Match>
 	public Team AwayTeam { get; init; } = null!;
 	public DateTime MatchDate { get; init; }
 
-	public Tournament.Tournament Cup { get; init; } = null!;
+	public Tournament Tournament { get; init; } = null!;
 	public Stage Stage { get; init; } = null!;
 
 	public int? LocalGoals { get; init; }

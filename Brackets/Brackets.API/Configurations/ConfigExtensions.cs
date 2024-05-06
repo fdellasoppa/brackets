@@ -6,6 +6,7 @@ using Brackets.Application.Configuration;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
+using Brackets.API.Tournaments;
 
 namespace Brackets.API.Configurations;
 
@@ -92,6 +93,7 @@ public static class ConfigExtensions
 
         app.MapControllers();
         app.MapMatchEndpoints();
+        app.MapTournamentEndpoints();
 
         app.Run();
     }
