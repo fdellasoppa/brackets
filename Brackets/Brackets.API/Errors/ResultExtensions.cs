@@ -21,4 +21,11 @@ public static class ResultExtensions
             }
             );
     }
+
+    public static IResult HandleResult<T>(this Result<T> result)
+    {
+        return result.IsSuccess ?
+                    TypedResults.Ok(result.Value)
+                    : result.ToProblemDetails();
+    }
 }

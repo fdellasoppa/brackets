@@ -1,24 +1,24 @@
 ﻿using Brackets.API.Errors;
-using Brackets.Application.Abstractions;
-using Brackets.Application.Matches;
 using Brackets.Domain.Matches;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Brackets.API.Matches;
 
 public static class MatchEndpoints
 {
+    [Authorize]
     public static void MapMatchEndpoints(this IEndpointRouteBuilder app)
     {
         app.MapGet("matches",
-            [SwaggerResponse(200, Type = typeof(List<Match>))]
+            [SwaggerResponse(200, Type = typeof(IList<Match>))]
             async (
-            IMatchService matchService,
+            GetMatchesRequest request,
+            IMediator mediator,
             CancellationToken cancel) => {
-                Result<List<Match>> result = await matchService.GetAllAsync(cancel);
-                return result.IsSuccess ? 
-                    TypedResults.Ok(result.Value) 
-                    : result.ToProblemDetails();
+                return (await mediator.Send(request))
+                    .HandleResult();
             })
 			.WithOpenApi();
 	}

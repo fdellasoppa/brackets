@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
     <PackageReference Include="Microsoft.Identity.Web" Version="2.18.0" />
     <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="2.18.0" />

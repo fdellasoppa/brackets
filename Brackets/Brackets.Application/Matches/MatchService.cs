@@ -12,9 +12,10 @@ public class MatchService : IMatchService
 		_matchRepository = matchRepository;
 	}
 
-	public async Task<Result<List<Match>>> GetAllAsync(CancellationToken cancel)
+	public async Task<Result<IList<Match>>> GetAllAsync(string tournamentId, 
+		CancellationToken cancel)
 	{
-		var res = await _matchRepository.GetAllAsync(cancel);
-		return Result<List<Match>>.Success(res);
+		var res = await _matchRepository.GetAllAsync(tournamentId, cancel);
+		return Result<IList<Match>>.Success(res);
 	}
 }

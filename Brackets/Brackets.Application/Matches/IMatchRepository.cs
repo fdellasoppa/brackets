@@ -4,5 +4,5 @@ namespace Brackets.Application.Matches;
 
 public interface IMatchRepository
 {
-	Task<List<Match>> GetAllAsync(CancellationToken cancel);
+	Task<List<Match>> GetAllAsync(string tournamentId, CancellationToken cancel);
 }

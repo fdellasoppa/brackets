@@ -14,9 +14,10 @@ public class MatchRepository : IMatchRepository
 	public MatchRepository(IMongoDbContext mongoDbContext) => 
 		_mongoDbContext = mongoDbContext;
 
-	public Task<List<Match>> GetAllAsync(CancellationToken cancel)
+	public Task<List<Match>> GetAllAsync(string tournamentId, 
+		CancellationToken cancel)
 	{
 		return _mongoDbContext.GetCollection<Match>(CollectionName)
-			.Find(Builders<Match>.Filter.Empty).ToListAsync(cancel);
+			.Find(m => m.Tournament.Id == tournamentId).ToListAsync(cancel);
 	}
 }
